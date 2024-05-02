@@ -3,7 +3,7 @@ package main
 import (
   "net/http"
 
-  "github.com/connornmfinlay/golang/http-server"
+  "http-server/api"
 )
 
 func main() {
