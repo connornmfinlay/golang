@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-//	"github.com/joho/godotenv"
+	"github.com/joho/godotenv"
 )
 
 type Config struct {
@@ -19,7 +19,7 @@ type Config struct {
 var Envs = initConfig()
 
 func initConfig () Config {
-  //godotenv.Load() for when variables are moved to .env
+  godotenv.Load() //for when variables are moved to .env
 
   return Config{
     PublicHost: getEnv("PUBLIC_HOST", "http://localhost"),
