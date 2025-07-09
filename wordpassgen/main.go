@@ -7,6 +7,7 @@ import (
 	"os"
 	"strings"
 	"time"
+	"github.com/atotto/clipboard"
 )
 
 func main() {
@@ -18,6 +19,13 @@ func main() {
 
 	password := GeneratePassword(words, 3) // 3 words
 	fmt.Println("Generated password:", password)
+
+	// Copy to clipboard
+	err = clipboard.WriteAll(password)
+	if err != nil {
+		log.Fatalf("Failed to copy to clipboard: %v", err)
+	}
+	fmt.Println("Password copied to clipboard.")
 }
 
 // LoadWordlist reads the wordlist from a file and returns a slice of words
