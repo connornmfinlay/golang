@@ -11,7 +11,7 @@ import (
 
 func main() {
 	// Load the wordlist
-	words, err := LoadWordlist("cleaned_words.txt")
+	words, err := LoadWordlist("/Users/cfinlay/projects/golang/wordpassgen/cleaned_words.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
